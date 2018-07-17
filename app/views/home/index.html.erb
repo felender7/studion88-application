@@ -8,16 +8,16 @@
  </div>
  <br>
 <div class="row">
-
-
     <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
       <div class="row">
          <div class="col-lg-6 col-md-8">
              <div class="card ">
                  <div class="card-header panel-green">
                      <div class="row">
                          <div class="col-xs-3">
-                             <i class="fa  fa-comments-o" aria-hidden="true"></i> SMS
+                            <i class="mdi mdi-message-text"></i> SMS
                          </div>
 
                      </div>
@@ -46,7 +46,8 @@
                <div class="card-header panel-green">
                    <div class="row">
                        <div class="col-xs-3">
-                           <i class="fa fa-plug" aria-hidden="true"></i> Electricity
+
+                      <i class="mdi mdi-flash"></i> Electricity
                        </div>
 
                    </div>
@@ -59,8 +60,7 @@
                <div class="card-header panel-green">
                    <div class="row">
                        <div class="col-xs-3">
-
-                          <i class="fa fa-shopping-basket" aria-hidden="true"></i> shopping
+                          <i class="mdi mdi-shopping"></i> shopping
                        </div>
 
                    </div>
@@ -95,27 +95,41 @@
         </div>
     </div>
   </div>
-
+</div>
+</div>
 </div>
 
 <div class="col-md-4">
-  <section id="usage">
-
-    <p>USAGE | <%=current_user.phone%></p>
-    <hr>
-     <%=render'home/charts/data_usage'%> <br>
-     <%=render'home/charts/voice_usage'%>
-     <br>
-     <button id="topup" class="btn btn-block btn-lg btn-primary">Top up</button>
-  </section>
-
+  <div class="card">
+    <div class="card-body">
+    <section id="usage">
+        <p> <i class="mdi mdi-cellphone"></i> USAGE | <%=current_user.phone%></p>
+        <hr>
+         <%=render'home/charts/data_usage'%> <br>
+         <%=render'home/charts/voice_usage'%>
+         <br>
+         <button id="topup" class="btn btn-block btn-lg btn-primary">Top up</button>
+      </section>
+    </div>
+</div>
 </div>
 <div class="col-md-4 push-right">
+  <i class="mdi mdi-calendar"></i> <%= Date.today %>
   <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-black rounded box-shadow">
           <img class="mr-3" src="https://www.choicehotels.com/cms/images/choice-hotels/choice-privileges/cp-points-for-stays-icon/cp-points-for-stays-icon.png" alt="" width="48" height="48">
           <div class="lh-100">
             <h6 class="mb-0 text-white lh-100">Points</h6>
             <small>200 pts</small>
           </div>
-        </div>
+    </div>
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-black rounded box-shadow">
+            <img class="mr-3" src="https://www.rbcrewards.com/camp/apple/_assets-custom/images/redeem_icon_2.png" alt="" width="48" height="48">
+            <div class="lh-100">
+              <h6 class="mb-0 text-white lh-100">Credit</h6>
+              <small>Active</small>
+            </div>
+      </div>
+
+
+</div>
 </div>
