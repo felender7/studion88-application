@@ -3,6 +3,7 @@
      <div class="col-lg-12">
        <h4>Hi, <%=current_user.name%></h4>
        <p>Welcome to South Africa’s largest branded fashion clothing and footwear retailer</p> <br>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-sm" %>
      </div>
  <br>
  </div>
