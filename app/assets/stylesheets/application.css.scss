@@ -1,0 +1,254 @@
+ //$navbar-default-bg: #312312;
+ // $light-orange: #ff8c00;
+ // $navbar-default-color: $light-orange;
+ // $body-bg              :$gray-900 !default;
+
+
+$primary-color        :#1e272e;
+$secondary-color      :#7F8C8D;
+$body-color           :#6c757d !default;
+//$body-bg                  : #ecf0f1;
+
+
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+@import "sticky-footer";
+@import "announcements";
+
+
+.rounded-circle-bg{
+  background-color: $primary-color;
+  width: 250px;
+  height: 250px;
+}
+.bg-dark {
+    background-color: $primary-color  !important;
+}
+.rounded2{margin-left: 33px;}
+.btn:hover{transition: all .2s ease-in-out;}
+#topup.btn-primary, .btn-default{
+  border-radius:5rem;
+}
+.btn-default{
+  background-color: #fff;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fdc53e;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.stacked-bar-container { border-radius:50px; background-color:$secondary-color; max-height:20px; height:20px; overflow:hidden;}
+.stacked-bar-info-title, .stacked-bar-info-value {
+    float: right;
+}
+.stacked-bar-info-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.stacked-bar-info-title-points {
+    font-size: 11px;
+    text-transform: uppercase;
+
+}
+.usage-container-title > .btn-link {
+    background: transparent;
+    color: #889391;
+    font-size: 14px;
+    text-decoration: none;
+    float: right;
+}
+
+.bar-segment {
+    background-color: transparent;
+    border-right: $primary-color solid 1px;
+}
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+}
+
+.circle{
+   width: 200px;
+   height: 200px;
+   border: 20px solid #fff;
+   margin-right: auto;
+   margin-left: auto;
+}
+.margin-top{margin-top: 80px;}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+nav.bg-light {background-color: #fdc53e !important;}
+.navbar-light .navbar-nav .nav-link {color: #fff;}
+
+.Icon {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  max-height: 80px;
+  max-height: 5rem;
+  max-width: 80px;
+  max-width: 5rem;
+}
+
+@media (min-width: 767px){
+
+      .Header-logo {
+      width: 3.75rem;
+      height: 3.75rem;
+      }
+}
+.Header-logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.card{
+  margin-bottom: 20px;
+
+}
+.content-inside {
+  padding-top: 70px;
+}
+
+
+
+
+.panel-green > a {
+    color: #5cb85c;
+}
+
+.panel-green > a:hover {
+    color: #3d8b3d;
+}
+.panel-green {
+  border-bottom: 1px solid;
+  border-color: $primary-color;
+  border-radius: 1px;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.btn-primary:hover{
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+
+// Fixes bootstrap nav-brand container overlap
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Masquerade alert shouldn't have a bottom margin
+body > .alert {
+  margin-bottom: 0;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #1e272e; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

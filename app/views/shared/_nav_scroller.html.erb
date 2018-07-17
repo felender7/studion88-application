@@ -1,0 +1,17 @@
+<%if user_signed_in?%>
+<div class="nav-scroller bg-white box-shadow">
+  <nav class="nav nav-underline">
+    <a class="nav-link">
+      <%= link_to root_path,  class: "nav-link", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+        <%= image_tag gravatar_image_url(current_user.email, size: 40), height: 20, width: 20, class: "rounded" %>
+      <% end %>
+    </a>
+    <a class="nav-link" href=""><%= Date.today %> </a>
+    <a class="nav-link active" href="#">Dashboard</a>
+    <a class="nav-link" href="#">
+      Data
+      <span class="badge badge-pill bg-light align-text-bottom">27</span>
+    </a>
+  </nav>
+</div>
+<%end%>

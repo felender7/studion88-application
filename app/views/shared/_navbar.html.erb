@@ -1,0 +1,50 @@
+
+<div class="bg-dark collapse" id="navbarHeader" style="">
+       <div class="container-fluid">
+         <div class="row">
+           <div class="col-sm-8 col-md-7 py-4">
+             <h4 class="text-white">About</h4>
+             <p class="text-muted">Carrying the best brands demanded by you with exclusive releases. Be in-the-know with our early releases of club jerseys and other special editions by joining our Facebook team of winners. Our sought after brands include Adidas Performance/Adidas Originals, Puma, Nike Sportswear, Converse, Superga, Jockey, Vans & Levi’s, to name a few. We also have our own in-house brands Nikos, Marina Yachting and KGB.</p>
+           </div>
+           <div class="col-sm-4 offset-md-1 py-4 pull-right">
+             <% if user_signed_in? %>
+             <ul class="list-unstyled">
+               <li><%= link_to notifications_path, class: "nav-link text-white" do %>
+                 <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+               <% end %></li>
+               <li class="nav-item text-white"> <a  class="nav-link" style="cursor:pointer" onclick="openNav()">&#9776; </a></li>
+               <li class="nav-item dropdown">
+                 <%= link_to root_path, id: "navbar-dropdown", class: "nav-link dropdown-toggle text-white", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+                   <i class="fa fa-cog"></i>
+                 <% end %>
+                 <div class="dropdown-menu " aria-labelledby="navbar-dropdown">
+                   <% if current_user.admin? %>
+                     <%= link_to "Admin Area", admin_root_path, class: "dropdown-item" %>
+                   <% end %>
+                   <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+                   <div class="dropdown-divider"></div>
+                   <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                 </div>
+               </li>
+
+               <%else%>
+             </ul>
+             <%end%>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="navbar navbar-dark bg-dark box-shadow">
+       <div class="container-fluid d-flex justify-content-between">
+         <a href="#" class="navbar-brand d-flex align-items-center">
+          <%=render'shared/logo'%>
+         </a>
+         <%= link_to "What's New", announcements_path, class: "nav-link text-white pull-right #{unread_announcements(current_user)}" %>
+
+         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+       </div>
+     </div>
+<%=render'shared/nav_scroller'%>
