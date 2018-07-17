@@ -17,7 +17,9 @@ $body-color           :#6c757d !default;
 @import "sticky-footer";
 @import "announcements";
 
-
+.bg-black{
+  background-color: $primary-color;
+}
 .rounded-circle-bg{
   background-color: $primary-color;
   width: 250px;
@@ -38,7 +40,7 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid #fdc53e;
+    border-top: 1px solid $primary-color;
 }
 
 .nav-scroller {
